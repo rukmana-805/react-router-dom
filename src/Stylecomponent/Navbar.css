@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    padding: 5px;
+    background-color: rgb(211, 204, 204);
+    display: flex;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav li{
+    margin-right: 30px;
+    padding: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.active li{
+    background-color: rgb(201, 243, 229);
+}
+a{
+    text-decoration: none;
+}
+li:hover{
+    background-color: rgb(201, 243, 229);
+}
+.leftside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.codegmu{
+    margin-left: 50px;
+    font-size: larger;
+    font-weight: 500;
+}
