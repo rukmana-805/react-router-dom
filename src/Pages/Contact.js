@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 export default function Contact() {
   return (
@@ -11,7 +11,16 @@ export default function Contact() {
       </div>
       <Link to="/">Go to Home Page</Link><br />
       <Link to="/about">Go to About Page</Link><br />
-      <Link to="/def">Random Link</Link>
+      <Link to="/def">Random Link</Link> <br />
+
+      <h3 style={{margin:"15px"}}>Here are some other Businesses</h3> {/* Learning Nested Routing here below */}
+
+      <Link style={{margin:"5px"}} to="company">Company</Link>
+      <Link style={{margin:"5px"}} to="youtube">Youtube</Link>{/* Remember no "/company" here only "company" */}
+      <Link style={{margin:"5px"}} to="others">Others</Link>
+
+      <Outlet/>
+      
     </div>
   )
 }

@@ -10,6 +10,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import Users from './Pages/Users';
 import Filters from './Pages/Filters';
+import Company from './Pages/Company';
+import Youtube from './Pages/Youtube';
+import Others from './Pages/Other';
 
 function App() {
   return (
@@ -19,7 +22,6 @@ function App() {
         <Routes>
           <Route path = "/" element = {<Home/>} />
           <Route path = "/about" element = {<About/>} />
-          <Route path = "/contact" element = {<Contact/>} />
           <Route path = "/filters" element = {<Filters/>} />
 
           {/* <Route path = "/*" element = {<Page404/>} /> */}
@@ -34,6 +36,13 @@ function App() {
           {/* showing details of users after clicking their name in users page dynamically */}
           <Route path="/users/:name" element = {<Users/>}/> {/* :name specify users ra ken user call heba link k click karle*/}
           
+          {/* Learning Nested Routing below */}
+          <Route path = "/contact" element = {<Contact/>}>
+            <Route path="company" element = {<Company/>}/> {/* Remember no "/company" here only "company" */}
+            <Route path="youtube" element = {<Youtube/>}/>
+            <Route path="others" element = {<Others/>}/>
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </div>
