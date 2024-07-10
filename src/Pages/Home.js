@@ -1,5 +1,5 @@
 import React from 'react'
-import {useNavigate} from "react-router-dom"
+import {useNavigate, useLocation} from "react-router-dom"
 
 export default function Home() {
 
@@ -8,6 +8,17 @@ export default function Home() {
   const callNavitage = (location) => {
     navigate(location);
   }
+
+  const location = useLocation();
+  console.log(location); 
+
+  // This gives a object which contains key, hash, pathname, search, state
+  // key : it is a unique and every time it is new, if you refresh it it gives defatult as value 
+  // hash : you can pass it throung url of browser like :- localhost:3000/#100 (using # sysmbol)
+  // search : you can pass it throung url of browser like :- localhost:3000/?age = 10 (using ? sysmbol)
+  // pathname : this is generally use when we use params for Routing : o/p:-> localhost:3000/contact/anil 
+  // state : In searchParams we pass some valaue in url but using state we can pass a object trhroung it.
+  //          this is used when a user click a link then a object pass through url
 
   return (
     <div>
