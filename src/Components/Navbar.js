@@ -18,6 +18,8 @@ export default function Navbar() {
                         <NavLink to="/about"><li>About   </li></NavLink>
                         <NavLink to="/contact"><li>Contact Us</li></NavLink>
                         <NavLink to="/filters"><li>Filters</li></NavLink>
+                        <NavLink to="/login"><li>Login</li></NavLink>
+                        <NavLink to="/secret"><li>Secrets</li></NavLink>
                     </ul>
                 </div>
             </nav>

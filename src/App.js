@@ -13,8 +13,14 @@ import Filters from './Pages/Filters';
 import Company from './Pages/Company';
 import Youtube from './Pages/Youtube';
 import Others from './Pages/Other';
+import Login from './Pages/Login';
+import Protected from './Pages/Protected';
+import Secret from './Pages/Secret';
 
-function App() {
+function App(props) {
+  // console.log(props.isLogin);
+  localStorage.setItem("name",false);
+  localStorage.setItem("password",false);
   return (
     <div className="App">
       <BrowserRouter>
@@ -42,7 +48,9 @@ function App() {
             <Route path="youtube" element = {<Youtube/>}/>
             <Route path="others" element = {<Others/>}/>
           </Route>
-
+          <Route path="/login" element = {<Login/>}/>
+          
+          <Route path="/secret" element = {<Protected Comp={Secret}/>}/>
         </Routes>
       </BrowserRouter>
     </div>
