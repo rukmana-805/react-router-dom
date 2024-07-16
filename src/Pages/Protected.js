@@ -7,13 +7,13 @@ export default function Protected(props) {
 
   useEffect(() => {
     let islogin = localStorage.getItem("name");
-    if (islogin) {
+    if (islogin == 'true') {
       navigate("/secret");
     }
     else{
         navigate("/");
     }
-  });
+  },[]);
 
   return (
     <div>

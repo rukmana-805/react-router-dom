@@ -8,24 +8,24 @@
     display: flex;
     justify-content: space-between;
 }
-nav ul{
+nav .rightside{
     display: flex;
     list-style: none;
 }
-nav li{
+nav .item{
     margin-right: 30px;
     padding: 15px;
     font-weight: 500;
     border-radius: 30px;
     cursor: pointer;
 }
-.active li{
+.active {
     background-color: rgb(201, 243, 229);
 }
 a{
     text-decoration: none;
 }
-li:hover{
+.item:hover{
     background-color: rgb(201, 243, 229);
 }
 .leftside{
