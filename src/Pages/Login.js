@@ -18,22 +18,12 @@ let Login = () => {
         }
     }
 
-    useEffect(()=>{
-        let islogin = localStorage.getItem("name");
-        if(islogin){
-            navigate("/login");
-        }
-        else{
-            navigate("/secret");
-        }
-    })
-
     return(
         <div>
             <h2 style={{margin:"20px"}}>Login Here</h2>
             <input onChange={(e)=>{setName(e.target.value)}} style={{margin:"5px",padding:"10px"}} type="text" placeholder="Enter Username" /> <br/>
             <input onChange={(e)=>{setPassword(e.target.value)}} style={{margin:"5px",padding:"10px"}} type="password" placeholder="Enter Password" /> <br/>
-            <input onClick={checkLogin} style={{margin:"5px",padding:"10px",width:"195px",border:"1px solid",backgroundColor:"#a7f3a7"}} type="submit" />
+            <button onClick={checkLogin} style={{margin:"5px",padding:"10px",width:"195px",border:"1px solid",backgroundColor:"#a7f3a7"}} type="submit">Submit</button>
 
         </div>
     )   

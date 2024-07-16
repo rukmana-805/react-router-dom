@@ -13,17 +13,15 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className="rightside">
-                    <ul>
-                        <NavLink to="/"><li>Home</li></NavLink>
-                        <NavLink to="/about"><li>About   </li></NavLink>
-                        <NavLink to="/contact"><li>Contact Us</li></NavLink>
-                        <NavLink to="/filters"><li>Filters</li></NavLink>
-                        <NavLink to="/login"><li>Login</li></NavLink>
-                        <NavLink to="/secret"><li>Secrets</li></NavLink>
-                    </ul>
+                
+                        <NavLink  className="item" to="/">Home</NavLink>
+                        <NavLink className="item" to="/about">About   </NavLink>
+                        <NavLink className="item" to="/contact">Contact Us</NavLink>
+                        <NavLink className="item" to="/filters">Filters</NavLink>
+                        <NavLink className="item" to="/login">Login</NavLink>
+                        <NavLink className="item" to="/secret">Secrets</NavLink>
                 </div>
             </nav>
-
     </div>
   )
 }
